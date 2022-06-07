@@ -42,6 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
      body: Center(child: DropdownButton(
        value: selected.toInt(),
+       icon: Icon(Icons.arrow_downward),
+       iconSize: 30,
+       underline: Container(
+         decoration: BoxDecoration(
+           border: Border(bottom: BorderSide(color: Colors.red))
+         ),
+       ),
+       style: TextStyle(color: Colors.blue),
        items: dropdownlist
            .map((e) => DropdownMenuItem(value: e, child: Text(e.toString())))
            .toList(),
